@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Funcionalidad.LoginPackage.Registro.PantallaRegistroActivity">
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignRight="@+id/editTextPersonName"
+
+        android:layout_below="@+id/editTextPersonName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="120dp"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignRight="@+id/editTextPersonName"
+
+        android:layout_below="@+id/editTextPersonName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="118dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textPassword" />
+
+
+    <TextView
+        android:id="@+id/TextoError"
+        android:layout_alignLeft="@+id/editTextPersonName"
+
+        android:layout_width="wrap_content"
+        android:layout_alignRight="@+id/editTextPersonName"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CardRegistro"
+        android:layout_marginTop="-216dp"
+        android:layout_marginBottom="65dp"
+        android:text="Fallo"
+        android:textSize="34sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="229dp"
+
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignRight="@+id/editTextPersonName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginRight="-314dp"
+        android:ems="10"
+        android:hint="usuario"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:ignore="NotSibling" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+
+        android:layout_below="@+id/editTextPersonName"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignRight="@+id/editTextPersonName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="116dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="contrasena"
+        android:inputType="textPassword" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardRegistro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="173dp"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="271dp"
+            android:layout_height="41dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Registrarse"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="75dp"
+        android:layout_height="33dp"
+        android:layout_above="@+id/CardRegistro"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="213dp"
+        android:layout_marginBottom="47dp"
+        android:text="Publico"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTextPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Repetir Contrasena" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_alignStart="@id/textView6"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="34dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:visibility="invisible" />
+
+</RelativeLayout>

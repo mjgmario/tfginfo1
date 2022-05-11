@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#888982"
+    tools:context="Funcionalidad.LoginPackage.ChatsUsuario.ChatsUsuarioActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barChat"
+        android:background="@color/my_custom_color">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="#081039"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imagenPerfil"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="left"
+                    android:src="@mipmap/perfil1_round" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/nombreUserPerfilLugares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#F0D033"
+                    android:text="Mario" />
+                <Button
+                    android:id="@+id/botonSeguirLugares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:text="Seguir"
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/descripcionPerfilLugares"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barChat"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:text="Descripcion"
+        android:textColor="#231B1A"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/descripcionPerfilLugares"
+        android:id="@+id/Linear1"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/botonSiguiendoPerfilLugares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siguiendo"
+            android:layout_marginRight="40dp"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#231B1A"/>
+        <TextView
+            android:id="@+id/botonSeguidoresPerfilLugares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seguidores"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#231B1A"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/Linear1"
+        android:id="@+id/Linear2"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/botonPublicacionesPerfilLugares"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="100dp"
+            android:src="@mipmap/iconopubli_round" />
+
+        <ImageButton
+            android:id="@+id/botonLugaresPerfilPublicaciones"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/iconolugares_round" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textLugaresPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lugares:"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#231B1A"
+        android:gravity="center"
+        android:layout_below="@+id/Linear2" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_lugares"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLugaresPerfil" />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_Perfil_Lugares"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+</RelativeLayout>
+

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#888982">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/bar"
+      android:background="@color/my_custom_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#081039">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <TextView
+      android:id="@+id/nombreLocalText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left"
+      android:text="Pacha"
+      android:textColor="#81F128"
+      android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/botonHeEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/nombreLocalText"
+        android:gravity="center"
+        android:shadowColor="#28F1EF"
+        android:text="@string/he_estado" />
+
+    <ImageButton
+        android:id="@+id/iconoMapsLocalesActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_toRightOf="@+id/botonHeEstado"
+
+        android:src="@mipmap/mapsicono_round" />
+
+      </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <ScrollView
+      android:layout_below="@id/bar"
+      android:id="@+id/scrollViewLocalesActivity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#888982">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888982"
+        android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/imagenLocal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+
+          tools:srcCompat="@mipmap/local1_foreground" />
+
+
+
+      <TextView
+          android:id="@+id/Descripcion_Pagina_Local"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Descricpion"
+          android:textSize="15dp"
+          android:padding="20dp"
+          android:fontFamily="sans-serif"
+          android:textColor="#F1C328"
+          android:layout_gravity="center"/>
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/amigos_que_han_estado"
+          android:textSize="25dp"
+          android:textColor="#81F128"
+
+          android:layout_gravity="center"
+          />
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerAmigosQueHanEstado"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <TextView
+          android:id="@+id/textRelaciones"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/relaciones"
+          android:textSize="25dp"
+          android:textColor="#81F128"
+android:fontFamily="sans-serif"
+
+          android:layout_gravity="center"/>
+
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerRelaciones"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"/>
+
+      <TextView
+          android:id="@+id/Eventos"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/eventos"
+          android:textSize="25dp"
+          android:textColor="#81F128"
+          android:fontFamily="sans-serif"
+
+          android:layout_gravity="center"/>
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerEventos"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats del local"
+            android:textSize="25dp"
+           />
+
+        <Button
+            android:id="@+id/botonVerTodoChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_todos_los_chats"
+            android:layout_marginRight="30dp"
+            />
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/darOpinionBotonLocal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Puntúa"
+          android:background="#0F6187"
+          android:layout_marginRight="30dp"
+          android:layout_gravity="center"
+          />
+
+    </LinearLayout>
+  </ScrollView>
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottom_navigation_locales"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      app:menu="@menu/bottom_navigation_menu" />
+
+
+
+
+</RelativeLayout>
+
+

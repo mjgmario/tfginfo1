@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/my_custom_color">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="#081039">
+
+
+            <ImageView
+                android:id="@+id/imglogo"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-20dp"
+                android:src="@drawable/telegram_2019_logo" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#888982"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textoSitiosInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Sitios en los que has estado"
+                android:textSize="24sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SitiosHasEstadoRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/TextoRecomendadoParaTiInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Recomendado para ti"
+
+                android:textSize="24sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecomendadoParaTiRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="116dp"
+                android:orientation="horizontal" />
+
+
+            <TextView
+                android:id="@+id/TextoSitiosAmigosInicio"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Sitios en los que han estado tus amigos"
+                android:textSize="24sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SitiosHanEstadoAmigosRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="129dp"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp" />
+
+
+            <TextView
+                android:id="@+id/TextoPublicacionesAmigos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Publicaciones de amigos"
+                android:textSize="24sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/PublicacionesRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="134dp"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+
+
+</RelativeLayout>

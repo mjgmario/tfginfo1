@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view2="https://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="cards main container"
+    android:paddingLeft="10dp"
+    tools:context=".Funcionalidad.LoginPackage.paginaInicio.InicioActivity"
+    >
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_view"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view2:cardBackgroundColor="#32D8AB"
+        card_view2:cardCornerRadius="10dp"
+        card_view2:cardElevation="5dp"
+        card_view2:cardUseCompatPadding="true"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+
+            <TextView
+                android:id="@+id/nombre_evento_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Pacha"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_alignParentTop="true"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/fecha_evento_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pacha"
+                android:textSize="10dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_below="@+id/nombre_evento_local"
+
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/precio_evento_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Pacha"
+                android:textSize="5dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_below="@+id/fecha_evento_local"
+
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/edad_min_evento_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Pacha"
+                android:textSize="5dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_below="@+id/precio_evento_local"
+
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+
+
+

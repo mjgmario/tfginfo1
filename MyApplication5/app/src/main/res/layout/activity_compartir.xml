@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Funcionalidad.LoginPackage.ChatsUsuario.ChatsUsuarioActivity"
+    android:background="#888982">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barCompartir"
+        android:background="@color/my_custom_color">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="#081039">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/botonAtrasCompartir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/lista_chats_chat_usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#F0D033"
+                    android:text="¿Qué deseas compartir?" />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#888982"
+        android:layout_below="@id/barCompartir">
+        <TextView
+            android:id="@+id/TextPublicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#F0D033"
+            android:text="Nueva publicacion"
+            />
+
+        <Button
+            android:id="@+id/botonNuevaPublicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nueva publicacion"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/Textchatusuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#F0D033"
+            android:text="Nuevo chat de usuarios"
+            />
+
+        <Button
+            android:id="@+id/botonNuevoChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nuevo chats de usuarios"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/TextChatLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#F0D033"
+            android:text="Nuevo chat de local"
+            />
+
+        <Button
+            android:id="@+id/BotonNuevoChatLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nuevo chats local"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_compartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
+
+
+
+
+

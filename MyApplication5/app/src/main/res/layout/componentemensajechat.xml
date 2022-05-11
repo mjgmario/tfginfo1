@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+
+
+
+        <TextView
+            android:id="@+id/nombre_user_mensaje_chat_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/contenido_mensaje_chat_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Contenido"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/fecha_creacion_mensaje_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha creacion"
+            android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/teal_700"
+        />
+</LinearLayout>

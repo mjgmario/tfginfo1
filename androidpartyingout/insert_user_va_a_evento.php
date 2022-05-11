@@ -1,0 +1,48 @@
+<?php
+
+require_once("db.php");
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    
+        $id_user = $_POST['id_user'];
+        $id_evento = $_POST['id_evento'];
+        
+        // ver primero si ya esta 
+        
+        $query1 = "SELECT * FROM r_va_a_evento WHERE id_user = '$id_user' AND id_evento = '$id_evento'";
+        $result1 = $mysql->query($query1);
+        if($mysql->affected_rows >0){
+            $response['error'] = false;
+            $response['esta'] = true;
+            $response['message'] = "El nombre ya esta registrado";
+        }
+        else{
+        $query = "INSERT INTO r_va_a_evento(id_user, id_evento) VALUES 
+        ('$id_user', '$id_evento')";
+        try {
+            $result = $mysql->query($query);
+
+        if($mysql->affected_rows >0){
+            $response['error'] = false;
+            $response['esta'] = false;
+
+        }
+        else{
+            $response['error'] = true;
+            $response['message'] = "No se han encontrado filas";
+        
+        }
+        } catch (Exception $e) {
+            $response['error'] = true;
+            $response['message'] = $e->getMessage();
+        }
+    }
+        
+        $mysql->close();
+        echo json_encode($response);
+    }   
+
+   
+        
+   ?>
+    

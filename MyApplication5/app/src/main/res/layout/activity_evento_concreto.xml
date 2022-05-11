@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/my_custom_color">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="#081039">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/nombre_evento_concreto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_toRightOf="@+id/botonAtrasEventoConcreto"
+                    android:maxLines="3"
+                    android:text="Fiesta grande"
+                    android:textColor="#81F128"
+                    android:textSize="30dp" />
+
+                <ImageButton
+                    android:id="@+id/botonAtrasEventoConcreto"
+                    android:layout_width="58dp"
+                    android:layout_height="37dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:shadowColor="#28F1EF"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:text="@string/he_estado" />
+
+                <Button
+                    android:id="@+id/botonVoyAIrEventoConcreto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nombre_evento_concreto"
+                    android:gravity="center"
+                    android:shadowColor="#28F1EF"
+                    android:text="Vas a ir?" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewLocalesActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        android:layout_alignParentBottom="true"
+        android:background="#888982">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#888982">
+
+            <TextView
+                android:id="@+id/fecha_evento_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:padding="20dp"
+                android:text="Fecha:"
+                android:textColor="#F1C328"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/descripcion_evento_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Descripcón evento"
+                android:textColor="#81F128"
+
+                android:textSize="25dp" />
+
+
+            <TextView
+                android:id="@+id/edad_max_evento_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="@string/relaciones"
+                android:textColor="#81F128"
+
+                android:textSize="25dp" />
+
+
+            <TextView
+                android:id="@+id/edad_min_evento_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="@string/eventos"
+                android:textColor="#81F128"
+
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/precio_evento_concreto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Precio"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/precio_copas_evento_concreto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Precio"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/usuarioquevaneventotext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Usuarios que van al evento: "
+                android:textSize="25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_van_a_ir_evento_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <Button
+                android:id="@+id/darOpinionEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puntúa"
+                android:background="#0F6187"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

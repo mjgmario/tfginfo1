@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Funcionalidad.LoginPackage.LoginActivity"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/TextoError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tarjeta"
+        android:layout_alignBottom="@+id/botonRegistrar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="65dp"
+        android:text="Rellena todos los atributos"
+        android:textSize="34sp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="132dp"
+
+        android:layout_height="144dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="74dp"
+        app:srcCompat="@drawable/telegram_2019_logo" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="usuario"
+        android:inputType="textPersonName"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/editTextPersonName"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="119dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="contrasena"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/botonRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="93dp"
+        android:text="Registrate aquí"
+        android:textColor="@color/teal_200" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/editTextPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+       android:layout_marginTop="110dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="186dp"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="271dp"
+            android:layout_height="41dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Login"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tarjeta2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tarjeta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="217dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="271dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="307dp">
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Error en el inicio de sesión"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

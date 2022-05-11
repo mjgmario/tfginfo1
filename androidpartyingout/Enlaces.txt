@@ -1,0 +1,14 @@
+https://www.tutorialspoint.com/android/android_php_mysql.htm
+(Ejemplo sencillo android php)
+https://stackoverflow.com/questions/20577573/connect-android-with-php-mysql
+(Ejemplo en el que se crea la clase de JSONParser para hacer requests)
+https://www.coderzheaven.com/2011/04/25/android-upload-an-image-to-a-server/
+(Cómo cargar una imagen)
+https://www.androidhive.info/2012/05/how-to-connect-android-with-php-mysql/
+(Buen ejemplo con clase JSONParser donde mete request).
+https://www.coderzheaven.com/2011/04/25/android-upload-an-image-to-a-server/
+(ejemplo de carga de imagen)
+https://www.youtube.com/watch?v=kWeeWOlzEKM#:~:text=On%20Single%20Click%20Open%20camera,Image%20from%20gallery%20as%20well.
+
+https://developer.android.com/training/volley/simple?hl=es-419
+(Cómo configurar una request queue).

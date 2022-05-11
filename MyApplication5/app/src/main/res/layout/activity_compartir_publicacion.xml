@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Funcionalidad.LoginPackage.ChatsUsuario.ChatsUsuarioActivity"
+    android:background="#888982">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barCompartir"
+        android:background="@color/my_custom_color">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="#081039">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/botonAtrasPublicacionCompartirPublicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/lista_chats_chat_usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#F0D033"
+                    android:text="Nueva publicacion" />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#888982"
+        android:layout_below="@id/barCompartir">
+        <TextView
+            android:id="@+id/TextPublicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#F0D033"
+            android:text="Selecciona imagen"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="404dp"
+            android:layout_height="212dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="30dp"
+            tools:src="@tools:sample/avatars" />
+
+
+
+        <TextView
+            android:id="@+id/DescripcionTextPublicacionSubirPubli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#F0D033"
+            android:text="Descripcion de publicacion"             />
+            />
+        <EditText
+            android:id="@+id/DescripcionEditTextPublicacionSubirPubli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Descripcion"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/FinalizarPublicacionBotonSubirPubli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_alignParentEnd="true"
+        android:text="Finalizar" />
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Home">Home</string>
+    <string name="buscar">Buscar</string>
+    <string name="compartir">compartir</string>
+    <string name="perfil">perfil</string>
+    <string name="chats">chats</string>
+    <string name="he_estado">He estado</string>
+    <string name="amigos_que_han_estado">Amigos que han estado</string>
+    <string name="relaciones">Relaciones del local</string>
+    <string name="eventos">Eventos del local</string>
+    <string name="ver_todos_los_chats">Ver todos los chats</string>
+</resources>

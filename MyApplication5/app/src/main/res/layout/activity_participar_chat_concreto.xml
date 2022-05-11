@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Funcionalidad.LoginPackage.ChatConcretoLocal.ParticiparChatLocalConcretoActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#888982"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/nombre_chat_participar_concreto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#080807"
+            android:textSize="20dp"
+            android:padding="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/descripcion_participar_concreto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#080807"
+            android:textSize="20dp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/textoAmigos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amigos"
+            android:textColor="#080807"
+            android:textSize="20dp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#81F128"
+            android:textSize="30dp"
+            android:text="¿Quieres entrar en este chat?"
+            android:gravity="center"
+            android:padding="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/boton_si_participar_chat_concreto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="si" />
+
+            <Button
+                android:id="@+id/boton_no_participar_chat_concreto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="no" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
