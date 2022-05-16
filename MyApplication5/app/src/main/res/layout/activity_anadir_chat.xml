@@ -1,50 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Funcionalidad.LoginPackage.ChatsUsuario.ChatsUsuarioActivity"
+    android:background="#888982">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/barChatAnadirUsuario"
+        android:background="@color/my_custom_color">
 
-        <Button
-            android:id="@+id/botonAtrasAnadirChat"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="atrás" />
+            android:id="@+id/toolbar"
+            android:background="#081039">
 
-        <EditText
-            android:id="@+id/nombreusuarioAnadirChat"
-            android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/botonAtrasAnadirChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <EditText
+                    android:layout_gravity="center"
+                    android:id="@+id/nombreusuarioAnadirChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Teclea el nombre "
+                    android:textColor="#141314"/>
+                <Button
+                    android:id="@+id/botonAnadirUsuarioChatAnadir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="Anadir"
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:orientation="vertical"
+            android:background="#888982"
+            android:layout_below="@id/barChatAnadirUsuario">
+            <TextView
+                android:id="@+id/mensajeErrorAnadirChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#CD2413"
+                android:text="Fallo"
+                android:visibility="gone"
+                />
 
-        <Button
-            android:id="@+id/botonAnadirUsuarioChatAnadir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Añadir" />
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/mensajeErrorAnadirChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-</LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+</RelativeLayout>
+
+
+

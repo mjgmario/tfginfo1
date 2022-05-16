@@ -58,6 +58,7 @@
     <EditText
         android:id="@+id/editTextPersonName"
         android:layout_width="229dp"
+        android:background="#11000000"
 
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editTextPersonName"
@@ -67,9 +68,8 @@
         android:layout_marginTop="76dp"
         android:layout_marginRight="-314dp"
         android:ems="10"
-        android:hint="usuario"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        android:text="Name"
         tools:ignore="NotSibling" />
 
     <EditText
@@ -105,7 +105,8 @@
 
         <RelativeLayout
             android:layout_width="271dp"
-            android:layout_height="41dp">
+            android:layout_height="41dp"
+            android:layout_gravity="center">
 
             <TextView
                 android:id="@+id/textView4"
@@ -137,10 +138,13 @@
         android:layout_below="@+id/editTextPassword"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/editTextPersonName"
+        android:layout_alignRight="@+id/editTextPersonName"
         android:layout_marginEnd="119dp"
+        android:background="#11000000"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Repetir Contrasena" />
+        android:hint="Repetir Contrasena"
+        android:inputType="textPersonName" />
 
     <Switch
         android:id="@+id/switch2"

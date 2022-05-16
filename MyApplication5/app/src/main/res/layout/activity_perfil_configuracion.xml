@@ -57,28 +57,64 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/textDescripcion"
+        android:id="@+id/textCambiarFotoPerfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/barChat"
         android:fontFamily="sans-serif-black"
         android:gravity="left"
-        android:text="Añade tu nueva descripción"
+        android:text="Cambia tu foto de perfil"
         android:textColor="#231B1A"
         android:textSize="25dp" />
 
+
+    <ImageView
+        android:id="@+id/imagenDescPerfil"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textCambiarFotoPerfil"
+        android:src="@drawable/ic_launcher_background"
+
+        />
+
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagenDescPerfil"
+        android:text="Elige foto"
+
+        />
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambiar foto"
+        android:layout_below="@+id/btnChoose"
+        />
+    <TextView
+        android:id="@+id/textDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnChoose"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:text="Cambia tu descripcion"
+        android:textColor="#231B1A"
+        android:textSize="25dp" />
     <EditText
         android:id="@+id/editTextDescripcionPerfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descripcion"
         android:layout_below="@+id/textDescripcion" />
+
     <Button
+        android:id="@+id/botonEditarDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextDescripcionPerfil"
-        android:text="Cambiar"
-        android:id="@+id/botonEditarDescripcion"/>
+        android:text="Cambiar descripcion" />
 
 
 </RelativeLayout>

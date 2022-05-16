@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -30,6 +31,8 @@ import com.example.myapplication.Funcionalidad.LoginPackage.Locales1.Usuario_Loc
 import com.example.myapplication.Funcionalidad.LoginPackage.paginaInicio.InicioActivity;
 import com.example.myapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,6 +51,10 @@ public class PerfilSeguidosActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNavigationView;
     private ArrayList<Usuario_Local> listaUsuarios;
     private Integer id_user;
+private Boolean tiene_foto;
+    private String id_foto_perfil;
+    private ImageView foto_perfil_view;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,11 +175,22 @@ public class PerfilSeguidosActivity extends AppCompatActivity {
 
                         } else {
                             try {
+                                tiene_foto = jsonObject.getBoolean("tiene_foto");
                                 nombre = jsonObject.getString("nombre");
                                 descripcion = jsonObject.getString("descripcion");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+                            if(tiene_foto){
+
+                                try {
+                                    id_foto_perfil = jsonObject.getString("id_foto_perfil");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                fijarFoto(id_foto_perfil);
+                            }
+
 
                             JSONArray jsonArray = null;
                             listaUsuarios = new ArrayList<>();
@@ -235,7 +253,22 @@ public class PerfilSeguidosActivity extends AppCompatActivity {
 
     }
 
+    private void fijarFoto(String id_foto_perfil) {
+        Picasso.get().load(Constantes.URL_ROOT_PERFIL + id_foto_perfil )
+                .fit()
+                .into(foto_perfil_view, new Callback() {
+                    @Override
+                    public void onSuccess() {
 
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                        Log.d(TAG, e.toString());
+
+                    }
+                });
+    }
     private void llenarRecyclerSeguidos() {
         AmigosHanEstadoAdapter usuariosAdapter = new AmigosHanEstadoAdapter(this, listaUsuarios);
         recycler_siguiendo.setAdapter(usuariosAdapter);
@@ -250,6 +283,7 @@ public class PerfilSeguidosActivity extends AppCompatActivity {
         botonLugares = findViewById(R.id.botonLugaresPerfilSeguidos);
         botonPublicaciones = findViewById(R.id.botonPublicacionesPerfilSeguidos);
         mBottomNavigationView = findViewById(R.id.bottom_navigation_Perfil_Seguidos);
+        foto_perfil_view = findViewById(R.id.imagenPerfilSeguidosPerfil);
 
     }
 }

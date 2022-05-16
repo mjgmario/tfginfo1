@@ -9,6 +9,7 @@
     android:tag="cards main container"
     android:paddingLeft="10dp"
     tools:context=".Funcionalidad.LoginPackage.paginaInicio.InicioActivity"
+
     >
 
     <androidx.cardview.widget.CardView
@@ -26,7 +27,7 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/local1">
+                    >
 
                 <TextView
                     android:id="@+id/nombre_sitio_recomendado"
@@ -47,7 +48,7 @@
                         android:layout_toRightOf="@+id/nombre_sitio_recomendado"
 
 
-                        android:src="@mipmap/mapsicono_round" />
+                        android:src="@drawable/ic_baseline_location_on_24" />
                 </RelativeLayout>
 
 

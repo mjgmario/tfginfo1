@@ -6,7 +6,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $username = $_POST['nombre'];
         $password = $_POST['password'];
         $correo = $_POST['correo'];
-        $publico = $_POST['publico'];
         $phone =  $_POST['phone'];
         
         
@@ -25,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
             else{
                 $query = "INSERT INTO usuarios(nombre, password, correo, publico, phone) VALUES 
-            ('$username', '$password', '$correo', '$publico', '$phone' )";
+            ('$username', '$password', '$correo', 0, '$phone' )";
 
                 try {
                     $result = $mysql->query($query);

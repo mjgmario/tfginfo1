@@ -29,7 +29,7 @@
                 android:layout_gravity="center">
 
                 <ImageButton
-                    android:id="@+id/imagenPerfil"
+                    android:id="@+id/imagenPerfilLugaresPerfil"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_gravity="left"
@@ -44,14 +44,7 @@
                     android:fontFamily="sans-serif-black"
                     android:textColor="#F0D033"
                     android:text="Mario" />
-                <Button
-                    android:id="@+id/botonSeguirLugares"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="center"
-                    android:text="Seguir"
-                    />
+
 
 
             </LinearLayout>
@@ -108,15 +101,15 @@
         <ImageButton
             android:id="@+id/botonPublicacionesPerfilLugares"
             android:layout_width="79dp"
-            android:layout_height="match_parent"
+            android:layout_height="79dp"
             android:layout_marginRight="100dp"
-            android:src="@mipmap/iconopubli_round" />
+            android:src="@drawable/ic_baseline_photo_camera_24" />
 
         <ImageButton
             android:id="@+id/botonLugaresPerfilPublicaciones"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:src="@mipmap/iconolugares_round" />
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:src="@drawable/ic_baseline_place_24" />
 
 
     </LinearLayout>

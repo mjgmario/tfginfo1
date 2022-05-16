@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,8 @@ import java.util.Map;
 
 public class AnadirUsuarioActivity extends AppCompatActivity {
     private static final String TAG= "Pagina mensajes chat";
-    private Button botonAtras, botonAnadir;
+    private Button botonAnadir ;
+    private ImageButton botonAtras;
     private EditText usuario_nombre;
     private TextView tarjetaError;
     private int id_chat;

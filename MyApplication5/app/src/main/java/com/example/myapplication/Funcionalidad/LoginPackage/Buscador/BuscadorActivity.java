@@ -61,6 +61,7 @@ public class BuscadorActivity extends AppCompatActivity{
     private ArrayList<Local> listaLocalesDestacados;
     private ArrayList<Local_Busqueda> listaLocalesBusqueda = new ArrayList<>();
     private LinearLayout layoutInicial, layoutFiltros;
+    private Boolean pantalla_primera = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,15 +77,40 @@ public class BuscadorActivity extends AppCompatActivity{
                 ejecutarBusqueda(textBusqueda.getText().toString());
             }
         });
+        textBusqueda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(recyclerresultadosBusqueda.getVisibility() == View.VISIBLE){
+                    recyclerresultadosBusqueda.setVisibility(View.GONE  );
+                    if(pantalla_primera){
+                        layoutInicial.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        layoutFiltros.setVisibility(view.VISIBLE);
+                    }
+                }
+                else{
+                    recyclerresultadosBusqueda.setVisibility(View.VISIBLE);
+                    if(pantalla_primera){
+                        layoutInicial.setVisibility(View.GONE);
+                    }
+                    else{
+                        layoutFiltros.setVisibility(View.GONE);
+                    }
+                }
+            }
+        });
         botonFiltros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(layoutInicial.getVisibility() == View.VISIBLE){
+                    pantalla_primera = false;
                     layoutInicial.setVisibility(View.GONE);
                     layoutFiltros.setVisibility(View.VISIBLE);
 
                 }
                 else{
+                    pantalla_primera = true;
                     layoutFiltros.setVisibility(View.GONE);
                     layoutInicial.setVisibility(View.VISIBLE);
                 }
@@ -106,12 +132,17 @@ public class BuscadorActivity extends AppCompatActivity{
                 String edad, precio;
                 edad = textFiltroEdad.getText().toString();
                 precio = textFiltroPrecio.getText().toString();
-                if(edad==""){
-                    edad = "19";
+
+
+                if(edad.equals("")){
+                    edad = "1000";
                 }
-                if(precio==""){
+                if(precio.equals("")){
                     precio= "1000";
                 }
+                Log.d(TAG, precio);
+                Log.d(TAG, edad);
+
                 ejecutarBusquedaAutocomplete(charSequence.toString(), edad, precio);
 
 
@@ -161,7 +192,7 @@ public class BuscadorActivity extends AppCompatActivity{
 
         // Nueva petición JSONObject
         StringRequest request = new StringRequest(
-                Request.Method.POST, "http://partiny.000webhostapp.com/" + "fetch_busqueda_autocomplete.php" ,
+                Request.Method.POST, Constantes.URL_AUTOCOMPLETE_BUSCADOR ,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

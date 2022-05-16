@@ -20,12 +20,24 @@
             $query2 = "SELECT fecha_ultimo_acceso FROM tabla_registro_chat_user
             WHERE id_user = '$id_user' AND id_chat = '$aux_id_chat' ";
             $result2 = $mysql->query($query2);
+            if($mysql->affected_rows >0){
+
             $lista2 = array();
             while($row2 =mysqli_fetch_assoc($result2)){
                 $lista2[] = $row2;
             }
             $aux_fecha = $lista2[0]['fecha_ultimo_acceso'];
+        }else{
+            $query5 = "INSERT INTO tabla_registro_chat_user(id_user , id_chat, fecha_ultimo_acceso) VALUES 
+        ('$id_user', '$aux_id_chat', NOW())";
+            $result = $mysql->query($query5);
+            if($mysql->affected_rows >0){
+                $now = new DateTime();
+                $aux_fecha = $now->format('Y-m-d H:i:s');
+            }
 
+
+        }
             $query3 = "SELECT COUNT(*) AS contador FROM mensajes
             WHERE id_chat = '$aux_id_chat' AND fecha > '$aux_fecha' ";
             $result3 = $mysql->query($query3);

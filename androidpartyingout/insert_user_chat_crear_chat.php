@@ -40,6 +40,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             if($mysql->affected_rows >0){
                 $response['error'] = false;
+            $query3 = "INSERT INTO  tabla_registro_chat_user(id_user, id_chat, fecha_ultimo_acceso) VALUES 
+            ('$id_user', '$id_chat', NOW())";
+            $result = $mysql->query($query3);
+                $response['error'] = false;
                 
             }
             else{

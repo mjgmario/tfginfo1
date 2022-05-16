@@ -34,12 +34,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $query3 = "SELECT Contenido FROM descripcion
             WHERE id_user = '$id_user' ";
             $result3 = $mysql->query($query3);
+            if($mysql->affected_rows >0){
+
             $lista2 = array();
             while($row =mysqli_fetch_assoc($result3)){
                 $lista2[] = $row;
             }
             $response['descripcion'] = $lista2[0]['Contenido'];
+        }
+        else{
+            $response['descripcion'] = '';
 
+        }
 
 
             $query4 = "SELECT id_foto_perfil FROM foto_perfil

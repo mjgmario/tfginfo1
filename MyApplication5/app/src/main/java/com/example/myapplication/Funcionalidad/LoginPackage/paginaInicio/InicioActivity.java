@@ -114,7 +114,7 @@ public class InicioActivity extends AppCompatActivity {
 
         // Nueva petición JSONObject
         StringRequest request = new StringRequest(
-                Request.Method.POST, Constantes.URL_SITIOS_USUARIO_HA_ESTADO,
+                Request.Method.POST, Constantes.URL_SITIOS_USUARIO_HA_ESTADO_INICIO,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

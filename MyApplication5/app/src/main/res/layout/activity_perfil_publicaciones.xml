@@ -108,15 +108,15 @@
         <ImageButton
             android:id="@+id/botonPublicaciones"
             android:layout_width="79dp"
-            android:layout_height="match_parent"
+            android:layout_height="79dp"
             android:layout_marginRight="100dp"
-            android:src="@mipmap/iconopubli_round" />
+            android:src="@drawable/ic_baseline_photo_camera_24" />
 
         <ImageButton
             android:id="@+id/botonLugaresPerfilPublicaciones"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:src="@mipmap/iconolugares_round" />
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:src="@drawable/ic_baseline_place_24" />
 
 
     </LinearLayout>

@@ -59,24 +59,23 @@
         android:orientation="vertical"
         android:background="#888982"
         android:layout_below="@id/barCompartir">
-        <TextView
-            android:id="@+id/TextPublicacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="#F0D033"
-            android:text="Selecciona imagen"
+        <ImageView
+            android:id="@+id/imagenPublicacionCompartir"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/textCambiarFotoPerfil"
+            android:src="@drawable/ic_launcher_background"
+
             />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="404dp"
-            android:layout_height="212dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="30dp"
-            tools:src="@tools:sample/avatars" />
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imagenDescPerfil"
+            android:text="Elige foto"
+
+            />
 
 
 

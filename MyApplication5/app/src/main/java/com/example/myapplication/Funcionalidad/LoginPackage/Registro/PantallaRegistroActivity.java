@@ -33,7 +33,7 @@ import java.util.Map;
 
 public class PantallaRegistroActivity extends AppCompatActivity {
 
-    private static final String TAG= "Login";
+    private static final String TAG= "registro";
 
     private EditText mUsername, mPassword, mRepetirContrasena, mCorreo, mTelefono;
     private CardView tarjetaRegistro;

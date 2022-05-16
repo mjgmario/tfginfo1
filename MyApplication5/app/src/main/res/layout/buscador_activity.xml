@@ -29,11 +29,11 @@
                     android:layout_height="50dp"
                     android:layout_alignParentStart="true"
                     android:gravity="left"
-                    android:src="@mipmap/iconofiltros" />
+                    android:src="@drawable/ic_baseline_view_headline_24" />
 
                 <EditText
                     android:id="@+id/textBusqueda"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_toRightOf="@+id/BotonFiltrosBuscador"
@@ -50,7 +50,8 @@
                     android:layout_toRightOf="@+id/textBusqueda"
                     android:gravity="right"
                     android:shadowColor="#28F1EF"
-                    android:src="@mipmap/iconobuscar" />
+                    android:src="@drawable/ic_baseline_search_24" />
+
 
             </RelativeLayout>
 
@@ -85,35 +86,22 @@
             android:orientation="horizontal"
             >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Precio"
-            android:id="@+id/TextPrecioBusqueda"
-            />
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextPrecioBusqueda"/>
+            android:id="@+id/editTextPrecioBusqueda"
+            android:hint="Precio maximo"/>
 
 
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edad"
-            android:id="@+id/TextEdadBusq"
-            />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edad"
-            />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,7 +119,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@+id/bar"
-        android:background="#7AD7CD"
+        android:background="#6B6A66"
         android:visibility="visible">
 
     <TextView

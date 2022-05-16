@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="2dp"
-    android:background="#F0EBEB">
+    android:background="#B0A7B0">
 
 
     <LinearLayout

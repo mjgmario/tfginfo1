@@ -29,39 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
             $response['nombre'] = $lista1[0]['nombre'];
 
-            $query3 = "SELECT Contenido FROM descripcion
-            WHERE id_user = '$id_user' ";
-
-            $result3 = $mysql->query($query3);
-            if($mysql->affected_rows >0){
-
-            $lista2 = array();
-            while($row =mysqli_fetch_assoc($result3)){
-                $lista2[] = $row;
-            }
-            $response['descripcion'] = $lista2[0]['Contenido'];
-        }else{
-            $response['descripcion'] ='';
-
-        }
-
-        $query4 = "SELECT id_foto_perfil FROM foto_perfil
-            WHERE id_user = '$id_user' ";
-            $result4 = $mysql->query($query4);
-            if($mysql->affected_rows ==0){
-                $response['tiene_foto'] = false;
-                
-            }
-            else{
-                $response['tiene_foto'] = true;
-                $lista3 = array();
-                while($row =mysqli_fetch_assoc($result4)){
-                    $lista3[] = $row;
-                }
-    
-                $response['id_foto_perfil'] = $lista3[0]['id_foto_perfil'];
-    
-            }
+           
         }
          catch (Exception $e) {
             $response['error'] = true;

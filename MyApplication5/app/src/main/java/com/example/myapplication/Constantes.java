@@ -8,6 +8,9 @@ public class Constantes {
     public static final String URL_MENSAJES_CHAT = ROOT_URL + "fetch_mensajes_chat.php";
     public static final String URL_LOGIN = ROOT_URL + "login.php";
     public static final String URL_INSERT_USER = ROOT_URL + "insert_user.php";
+
+    public static final String URL_SITIOS_USUARIO_HA_ESTADO_INICIO =ROOT_URL + "fetch_sitios_ha_estado_inicio.php";
+
     public static final String URL_SITIOS_USUARIO_HA_ESTADO =ROOT_URL + "fetch_sitios_en_los_que_ha_estado_perfil.php";
     public static final String URL_SITIOS_RECOMENDADOS =ROOT_URL + "fetch_sitios_mas_destacados.php";
     public static final String URL_SITIOS_HAN_ESTADO_SEGUIDOS = ROOT_URL + "fetch_sitios_en_los_que_han_estado_seguidos.php";
@@ -54,4 +57,7 @@ public class Constantes {
     public static final String URL_INSERT_USER_HA_ESTADO_LOCAL = ROOT_URL + "insertUserEstadoLocal.php";
     public static final String URL_FETCH_SI_USER_HA_IDO_LOCAL = ROOT_URL + "fetch_si_user_va_a_local.php";
     public static final String URL_DELETE_CHAT_CREAR_CHAT = ROOT_URL + "deleteChatCrearChat.php";
+    public static final String URL_UPDATE_DESCRIPCION_USER =  ROOT_URL + "update_perfil_descripcion.php";
+    public static final String URL_AUTOCOMPLETE_BUSCADOR = ROOT_URL + "fetch_busqueda_autocomplete.php";
+    public static final String URL_UPLOAD_IMAGE_PERFIL = ROOT_URL + "upload_image.php";
 }
